@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/Icon-TPBank.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>TPbank</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- START HEADER -->
+      <div id="header">
+        <div class="container">
+          <div class="header-container">
+            <div class="header-logo">
+              <a href="#">
+                <img src="./assets/images/logo-fix.png" alt="logo" />
+              </a>
+            </div>
+            <div class="header-link">
+              <a href="#">Bảo hiểm khoản vay</a>
+              <a href="#">Các câu hỏi thường gặp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END HEADER -->
+
+      <!-- START FORM -->
+      <div id="form">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="form-intro">
+                <h1 class="title">
+                  Vay tiền nhanh <br />
+                  <span>Online</span>
+                </h1>
+                <p class="desc">Không thế chấp tài sản</p>
+                <p class="desc">Thủ tục đơn giản, nhận tiền nhanh chóng</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <form class="form-container">
+                <h1 class="title">Đăng kí khoản vay</h1>
+                <div class="form-input-container">
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Họ tên</p>
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Số điện thoại</p>
+                      <input type="number" />
+                    </div>
+                    <div class="form-input-item">
+                      <p class="label">Quốc tịch</p>
+                      <div class="input">
+                        <input type="text" />
+                        <div class="clear-btn">
+                          <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="toggle-btn">
+                          <i class="toggle-icon fa-solid fa-caret-up"></i>
+                          <i
+                            class="toggle-icon active fa-solid fa-caret-down"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Số tiền vay</p>
+                      <div class="input">
+                        <input type="number" />
+                        <p class="unit">VND</p>
+                      </div>
+                    </div>
+                    <div class="form-input-item">
+                      <p class="label">Hình thức thu nhập</p>
+                      <div class="input">
+                        <input type="text" />
+                        <div class="clear-btn">
+                          <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="toggle-btn">
+                          <i class="fa-solid fa-caret-up"></i>
+                          <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit">Đăng kí</button>
+                  <a href="#" class="link">Bạn đã đăng kí?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END FORM -->
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
