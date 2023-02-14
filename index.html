@@ -24,6 +24,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>TPbank</title>
@@ -69,20 +73,20 @@
                   <div class="form-input">
                     <div class="form-input-item">
                       <p class="label">Họ tên</p>
-                      <input type="text" />
+                      <input type="text" placeholder="Họ tên" />
                     </div>
                   </div>
                   <div class="form-input">
                     <div class="form-input-item">
                       <p class="label">Số điện thoại</p>
-                      <input type="number" />
+                      <input type="number" placeholder="Số điện thoại" />
                     </div>
                     <div class="form-input-item">
                       <p class="label">Quốc tịch</p>
                       <div class="input">
-                        <input type="text" />
+                        <input type="text" value="Việt Nam" readonly />
                         <div class="clear-btn">
-                          <i class="fa-solid fa-xmark"></i>
+                          <i class="clear-icon fa-solid fa-xmark"></i>
                         </div>
                         <div class="toggle-btn">
                           <i class="toggle-icon fa-solid fa-caret-up"></i>
@@ -97,20 +101,26 @@
                     <div class="form-input-item">
                       <p class="label">Số tiền vay</p>
                       <div class="input">
-                        <input type="number" />
+                        <input type="number" placeholder="VD: 50 000 000" />
                         <p class="unit">VND</p>
                       </div>
                     </div>
                     <div class="form-input-item">
                       <p class="label">Hình thức thu nhập</p>
                       <div class="input">
-                        <input type="text" />
+                        <input
+                          type="text"
+                          placeholder="Vui lòng chọn"
+                          readonly
+                        />
                         <div class="clear-btn">
-                          <i class="fa-solid fa-xmark"></i>
+                          <i class="clear-icon fa-solid fa-xmark"></i>
                         </div>
                         <div class="toggle-btn">
-                          <i class="fa-solid fa-caret-up"></i>
-                          <i class="fa-solid fa-caret-down"></i>
+                          <i class="toggle-icon fa-solid fa-caret-up"></i>
+                          <i
+                            class="toggle-icon active fa-solid fa-caret-down"
+                          ></i>
                         </div>
                       </div>
                     </div>
@@ -124,6 +134,292 @@
         </div>
       </div>
       <!-- END FORM -->
+
+      <!-- START STEP -->
+      <div id="step">
+        <div class="container">
+          <h2>Đăng kí chỉ với 4 bước</h2>
+          <div class="step-list">
+            <div class="step-container">
+              <p class="number">1</p>
+              <h3 class="title">
+                <span>Đăng kí thông tin</span> & cung cấp CMND/CCCD
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">2</p>
+              <h3 class="title">
+                <span>Nhận cuộc gọi</span> tư vấn từ các chuyên gia
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">3</p>
+              <h3 class="title">
+                <span>Phê duyệt</span> hồ sơ vay trong vài phút
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">4</p>
+              <h3 class="title">
+                <span>Giải ngân tự động</span> vào tài khoản của bạn
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END STEP -->
+
+      <!-- START ADVANTAGE -->
+      <div id="advantage">
+        <div class="container">
+          <h2>ưu điểm của gói vay tpbank</h2>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="advantage-container">
+                <div class="advantage-list">
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-scroll"></i>
+                    <h3 class="title">thủ tục vay</h3>
+                    <p class="desc">
+                      Thời gian phê duyệt hồ sơ & giải ngân nhanh
+                    </p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h3 class="title">khoản vay</h3>
+                    <p class="desc">Lên đến 200 triệu</p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <h3 class="title">Chứng minh thu nhập</h3>
+                    <p class="desc">
+                      Không cần tài sản đảm bảo hay chứng minh thu nhập
+                    </p>
+                  </div>
+                </div>
+                <div class="advantage-list">
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-percent"></i>
+                    <h3 class="title">lãi suất vay</h3>
+                    <p class="desc">Chỉ từ 1.2%/tháng</p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-calendar"></i>
+                    <h3 class="title">kì hạn vay</h3>
+                    <p class="desc">Lên đến 60 tháng</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-0">
+              <div class="advantage-img">
+                <img src="./assets/images/advantage.png" alt="Ưu điểm" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END ADVANTAGE -->
+
+      <!-- START FAQ -->
+      <div id="faq">
+        <div class="container">
+          <h2>các câu hỏi thường gặp</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại TPBank là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item active">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại TPBank là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại TPBank là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại TPBank là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại TPBank là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END FAQ -->
+
+      <!-- START TESTIMONIALS -->
+      <div id="testimonials">
+        <div class="container">
+          <h2>nhận xét của khách hàng</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonials-item">
+                  <div class="testimonials-profile">
+                    <div class="testimonials-img">
+                      <img src="./assets/images/client1.svg" alt="khách hàng" />
+                    </div>
+                    <p class="name">Chị <span>Bùi Thị Lương</span></p>
+                    <p class="address">Hà Nội</p>
+                  </div>
+                  <p class="testimonials-comment">
+                    Với người bận rộn như tôi, việc tới ngân hàng để giao dịch
+                    vay vốn trong giờ hành chính là việc rất khó. Với TPBank,
+                    vấn đề này đã được giải quyết. Tôi vote 5* cho TPBank.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials-item">
+                  <div class="testimonials-profile">
+                    <div class="testimonials-img">
+                      <img src="./assets/images/client2.svg" alt="khách hàng" />
+                    </div>
+                    <p class="name">Anh <span>Nguyễn Huy Đông</span></p>
+                    <p class="address">Hà Nội</p>
+                  </div>
+                  <p class="testimonials-comment">
+                    Với sản phẩm này, nhu cầu tiền mặt được hỗ trợ cực kỳ hiệu
+                    quả và nhanh chóng mà không cần tới ngân hàng hay thế chấp
+                    tài sản.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials-item">
+                  <div class="testimonials-profile">
+                    <div class="testimonials-img">
+                      <img src="./assets/images/client3.svg" alt="khách hàng" />
+                    </div>
+                    <p class="name">Anh <span>Lê Minh Tú</span></p>
+                    <p class="address">Hà Nội</p>
+                  </div>
+                  <p class="testimonials-comment">
+                    Là một người làm chuyên về công nghệ, tôi đánh giá cao sản
+                    phẩm này. Trong thời đại hiện nay, việc ngồi tại nhà và đăng
+                    ký vay trực tuyến như sản phẩm này là một xu thế tất yếu.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END TESTIMONIALS -->
+
+      <!-- START FOOTER -->
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer-logo">
+                <div class="footer-logo-img">
+                  <img src="./assets/images/logo-fix.png" alt="Logo" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="footer-info">
+                <p>
+                  <i class="fa-solid fa-location-dot"></i> 89 Lang Ha str, Dong
+                  Da dist, Ha Noi
+                </p>
+                <p><i class="fa-solid fa-location-dot"></i> 1900545415</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="footer-info">
+                <p>
+                  <i class="fa-solid fa-location-dot"></i>
+                  customercare@tpbank.com.vn
+                </p>
+                <p>
+                  <i class="fa-solid fa-location-dot"></i> https://tpbank.com.vn
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="copyrights">
+                <p>© 2022. All rights reserved by VPBank</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END FOOTER -->
     </div>
 
     <script
@@ -137,6 +433,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script type="module" src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src=".assets/js/app.js"></script>
+    <script src="./assets/js/testimonials.js"></script>
   </body>
 </html>
