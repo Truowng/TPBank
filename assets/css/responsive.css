@@ -1,0 +1,147 @@
+/* START TABLET */
+@media (max-width: 992px) {
+  /* START FORM  */
+
+  #form .form-container {
+    margin-top: 30px;
+    width: 100%;
+    max-width: unset;
+  }
+  /* END FORM  */
+
+  /* START STEP */
+  #step .step-list {
+    flex-wrap: wrap;
+  }
+
+  #step .step-container {
+    flex: 0 49%;
+  }
+  /* END STEP */
+
+  /* START FAQ */
+  #faq .faq-answer {
+    width: 100%;
+    margin-left: 0;
+  }
+  /* END FAQ */
+
+  /* START FOOTER */
+  #footer .col-lg-6:nth-of-type(3) .footer-info {
+    padding-left: 0;
+  }
+  /* END FOOTER */
+}
+
+@media (max-width: 767px) {
+  /* START HEADER */
+  #header .header-link {
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+  }
+  /* END HEADER */
+
+  /* START FORM */
+  #form .form-intro .title {
+    font-size: 50px;
+  }
+
+  /* END FORM */
+
+  /* START ADVANTAGE */
+  #advantage h2 {
+    font-size: 30px;
+  }
+  /* END ADVANTAGE */
+
+  /* START FAQ */
+  #faq h2 {
+    font-size: 30px;
+  }
+  /* END FAQ */
+
+  /* START TESTIMONIALS */
+  #testimonials h2 {
+    font-size: 30px;
+  }
+  /* END TESTIMONIALS */
+
+  /* START FOOTER */
+  #footer .col-lg-6:nth-of-type(3) {
+    border-left: unset;
+  }
+  /* END FOOTER */
+}
+/* END TABLET */
+
+/* START MOBILE */
+@media (max-width: 575px) {
+  /* START HEADER */
+  #header .header-link {
+    display: none;
+  }
+  #header .header-container {
+    justify-content: center;
+  }
+  /* END HEADER */
+  /* START FORM */
+  #form .form-input:nth-child(2),
+  #form .form-input:nth-child(3) {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #form .form-intro .title {
+    font-size: 35px;
+  }
+  #form .form-intro .desc {
+    font-size: 16px;
+  }
+  /* END FORM */
+  /* START STEP */
+
+  #step .step-container {
+    flex: 1 0 50%;
+  }
+
+  #step h2 {
+    margin: 0 auto;
+    height: 50px;
+    max-width: 250px;
+    transform: translateY(6px);
+    font-size: 16px;
+  }
+  /* END STEP */
+
+  /* START ADVANTAGE */
+  #advantage h2 {
+    font-size: 22px;
+  }
+
+  #advantage .advantage-container {
+    flex-direction: column;
+  }
+
+  #advantage .advantage-img {
+    margin-top: 50px;
+  }
+  /* END ADVANTAGE */
+
+  /* START FAQ */
+  #faq h2 {
+    font-size: 22px;
+  }
+
+  /* END FAQ */
+
+  /* START TESTIMONIALS */
+  #testimonials h2 {
+    font-size: 22px;
+  }
+
+  #testimonials .testimonials-item .testimonials-comment {
+    font-size: 14px;
+  }
+  /* END TESTIMONIALS */
+}
+/* END MOBILE */

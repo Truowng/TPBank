@@ -18,6 +18,26 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+@keyframes jellyIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  25% {
+    transform: scaleX(1.1) scaleY(0.9);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scaleX(0.9) scaleY(1.1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .wrapper {
   background-image: url("../images/bg.png");
   background-size: cover;
@@ -29,8 +49,6 @@ body {
 }
 
 /* START HEADER */
-#header {
-}
 
 #header .header-container {
   height: var(--header-height);
@@ -81,6 +99,7 @@ body {
   font-weight: 800;
   color: #fff;
   text-align: right;
+  width: 100%;
 }
 
 #form .form-intro .title span {
@@ -172,7 +191,8 @@ body {
   padding: 0 5px;
 }
 
-#form .form-input .form-input-item input {
+#form .form-input .form-input-item input,
+#form .form-input .form-input-item select {
   color: #343434;
   height: 40px;
   padding: 0;
@@ -183,6 +203,15 @@ body {
   outline: none;
   border: 1px solid #ccc;
   width: 100%;
+}
+
+#form .form-input .form-input-item input:focus,
+#form .form-input .form-input-item select:focus {
+  border: 2px solid var(--primary-color);
+}
+
+#form .form-input .form-input-item select {
+  -webkit-appearance: none;
 }
 
 #form .form-input .form-input-item input::-webkit-inner-spin-button,
@@ -245,16 +274,24 @@ body {
 
 #form .form-input-container button[type="submit"] {
   outline: none;
-  border: none;
+  border: 2px solid transparent;
   background: rgb(176, 85, 175);
   background: var(--gradient);
   height: 50px;
-  width: 260px;
+  max-width: 260px;
+  width: 100%;
   font-size: 20px;
   border-radius: 40px;
   color: #fff;
   margin: 24px auto 32px;
   display: block;
+  transition: all ease 0.3s;
+}
+
+#form .form-input-container button[type="submit"]:hover {
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
 }
 
 #form .form-input-container .link {
@@ -284,7 +321,7 @@ body {
 
 #step h2 {
   color: #263c87;
-  width: 321px;
+  max-width: 321px;
   height: 69px;
   margin: 0;
   display: flex;
@@ -459,7 +496,7 @@ body {
 }
 
 #faq .faq-list {
-  width: 772px;
+  max-width: 772px;
   margin: 0 auto;
 }
 
@@ -474,6 +511,7 @@ body {
 
 #faq .faq-item.active .faq-answer {
   display: block;
+  animation: jellyIn ease 0.75s;
 }
 
 #faq .faq-question {
@@ -492,6 +530,11 @@ body {
 #faq .faq-question svg {
   font-size: 20px;
   color: var(--primary-color);
+  transition: all ease 0.3s;
+}
+
+#faq .faq-item.active .faq-question .arrow-icon {
+  transform: rotate(90deg);
 }
 
 #faq .faq-question .arrow-icon {
