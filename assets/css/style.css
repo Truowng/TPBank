@@ -210,8 +210,14 @@ body {
   border: 2px solid var(--primary-color);
 }
 
+#form .form-input .form-input-item input,
 #form .form-input .form-input-item select {
   -webkit-appearance: none;
+}
+
+#form .form-input .form-input-item input::-webkit-calendar-picker-indicator {
+  display: none;
+  opacity: 0;
 }
 
 #form .form-input .form-input-item input::-webkit-inner-spin-button,
