@@ -203,11 +203,14 @@ body {
   outline: none;
   border: 1px solid #ccc;
   width: 100%;
+  transition: all ease 0.2s;
 }
 
+#form .form-input .form-input-item input:hover,
+#form .form-input .form-input-item select:hover,
 #form .form-input .form-input-item input:focus,
 #form .form-input .form-input-item select:focus {
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 #form .form-input .form-input-item input,
@@ -223,6 +226,11 @@ body {
 #form .form-input .form-input-item input::-webkit-inner-spin-button,
 #form .form-input .form-input-item input::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+#form .form-input .form-input-item #legion {
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 #form .form-input-item .input .clear-btn,
@@ -526,6 +534,7 @@ body {
   gap: 10px;
   width: 100%;
   align-items: center;
+  cursor: pointer;
 }
 
 #faq .faq-question p {
@@ -555,6 +564,7 @@ body {
   padding: 20px;
   font-size: 14px;
   display: none;
+  cursor: default;
 }
 /* END FAQ */
 
