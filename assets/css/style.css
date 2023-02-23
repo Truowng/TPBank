@@ -219,7 +219,6 @@ body {
 }
 
 #form .form-input .form-input-item input::-webkit-calendar-picker-indicator {
-  display: none;
   opacity: 0;
 }
 
@@ -249,8 +248,7 @@ body {
   padding: 5px 8px;
 }
 
-#form .form-input-item .input .clear-btn .clear-icon:hover,
-#form .form-input-item .input .toggle-btn .toggle-icon:hover {
+#form .form-input-item .input .clear-btn .clear-icon:hover {
   background-color: #ccc;
 }
 
@@ -270,6 +268,7 @@ body {
 
 #form .form-input-item .input .toggle-btn .toggle-icon {
   display: none;
+  cursor: default;
 }
 
 #form .form-input-item .input .toggle-btn .toggle-icon.active {
