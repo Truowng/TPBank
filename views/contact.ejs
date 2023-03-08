@@ -28,11 +28,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
 
-    <title>TPbank</title>
+    <title>TPBank</title>
   </head>
+
   <body>
     <div class="wrapper">
       <!-- START HEADER -->
@@ -41,7 +42,7 @@
           <div class="header-container">
             <div class="header-logo">
               <a href="#">
-                <img src="./assets/images/logo-fix.png" alt="logo" />
+                <img src="/images/logo-fix.png" alt="logo" />
               </a>
             </div>
             <!-- <div class="header-link">
@@ -68,25 +69,30 @@
               </div>
             </div>
             <div class="col-lg-6 col-sm-12">
-              <form class="form-container">
+              <form action="/contact" method="post" class="form-container">
                 <h1 class="title">Đăng kí khoản vay</h1>
                 <div class="form-input-container">
                   <div class="form-input">
                     <div class="form-input-item">
                       <p class="label">Họ tên</p>
-                      <input type="text" placeholder="Họ tên" />
+                      <input type="text" name="hoten" placeholder="Họ tên" />
                     </div>
                   </div>
                   <div class="form-input">
                     <div class="form-input-item">
                       <p class="label">Số điện thoại</p>
-                      <input type="number" placeholder="Số điện thoại" />
+                      <input
+                        type="number"
+                        name="sdt"
+                        placeholder="Số điện thoại"
+                      />
                     </div>
                     <div class="form-input-item">
                       <p class="label">Khu vực</p>
                       <div class="input">
                         <input
                           type="text"
+                          name="kv"
                           list="legion"
                           placeholder="Chọn khu vực"
                         />
@@ -120,12 +126,16 @@
                     <div class="form-input-item">
                       <p class="label">Số tiền vay</p>
                       <div class="input">
-                        <input type="number" placeholder="VD: 50 000 000" />
+                        <input
+                          type="number"
+                          name="sotienvay"
+                          placeholder="VD: 50 000 000"
+                        />
                         <p class="unit">VND</p>
                       </div>
                     </div>
                     <div class="form-input-item">
-                      <p class="label">Hình thức thu nhập</p>
+                      <p class="label">Điều Kiện Vay Vốn</p>
                       <div class="input">
                         <select name="incomeType" id="income-type">
                           <option value="Vui lòng chọn" disabled selected>
@@ -141,7 +151,7 @@
                         </select>
                         <div
                           class="clear-btn"
-                          onclick="clearValue('incomeType')"
+                          onclick="clearValue('income-type')"
                         >
                           <i class="clear-icon fa-solid fa-xmark"></i>
                         </div>
@@ -154,7 +164,12 @@
                       </div>
                     </div>
                   </div>
-                  <button type="submit">Đăng kí</button>
+                  <button onclick="myFunction()" type="submit">Đăng kí</button>
+                  <script>
+                    function myFunction() {
+                      alert('Đăng ký thành công');
+                    }
+                  </script>
                   <a href="#" class="link">Bạn đã đăng kí?</a>
                 </div>
               </form>
@@ -242,7 +257,7 @@
             </div>
             <div class="col-lg-6 col-sm-0">
               <div class="advantage-img">
-                <img src="./assets/images/advantage.png" alt="Ưu điểm" />
+                <img src="/images/advantage.png" alt="Ưu điểm" />
               </div>
             </div>
           </div>
@@ -355,7 +370,7 @@
                 <div class="testimonials-item">
                   <div class="testimonials-profile">
                     <div class="testimonials-img">
-                      <img src="./assets/images/client1.svg" alt="khách hàng" />
+                      <img src="/images/client1.svg" alt="khách hàng" />
                     </div>
                     <p class="name">Chị <span>Bùi Thị Lương</span></p>
                     <p class="address">Hà Nội</p>
@@ -371,7 +386,7 @@
                 <div class="testimonials-item">
                   <div class="testimonials-profile">
                     <div class="testimonials-img">
-                      <img src="./assets/images/client2.svg" alt="khách hàng" />
+                      <img src="/images/client2.svg" alt="khách hàng" />
                     </div>
                     <p class="name">Anh <span>Nguyễn Huy Đông</span></p>
                     <p class="address">Hà Nội</p>
@@ -387,7 +402,7 @@
                 <div class="testimonials-item">
                   <div class="testimonials-profile">
                     <div class="testimonials-img">
-                      <img src="./assets/images/client3.svg" alt="khách hàng" />
+                      <img src="/images/client3.svg" alt="khách hàng" />
                     </div>
                     <p class="name">Anh <span>Lê Minh Tú</span></p>
                     <p class="address">Hà Nội</p>
@@ -416,26 +431,24 @@
             <div class="col-lg-12">
               <div class="footer-logo">
                 <div class="footer-logo-img">
-                  <img src="./assets/images/logo-fix.png" alt="Logo" />
+                  <img src="/images/logo-fix.png" alt="Logo" />
                 </div>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="footer-info">
                 <p>
-                  <i class="fa-solid fa-location-dot"></i> 89 Lang Ha str, Dong
-                  Da dist, Ha Noi
+                  <i class="fa-solid fa-location-dot"></i> 110 Nguyễn Khánh
+                  Toàn, Cầu Giấy, Hà Nội
                 </p>
-                <p><i class="fa-solid fa-phone"></i> 1900545415</p>
+                <p>
+                  <i class="fa-solid fa-phone"></i> 0879.212.638 | 087.667.1994
+                </p>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="footer-info">
-                <p>
-                  <i class="fa-solid fa-envelope"></i>
-                  customercare@tpbank.com.vn
-                </p>
-                <p><i class="fa-solid fa-globe"></i> https://tpbank.com.vn</p>
+                <p><i class="fa-solid fa-globe"></i> taichinhtieudunghn.com</p>
               </div>
             </div>
             <div class="col-lg-12">
@@ -461,8 +474,8 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./assets/js/form.js"></script>
-    <script src="./assets/js/faq.js"></script>
-    <script src="./assets/js/testimonials.js"></script>
+    <script src="/js/form.js"></script>
+    <script src="/js/faq.js"></script>
+    <script src="/js/testimonials.js"></script>
   </body>
 </html>
