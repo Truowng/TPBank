@@ -23,26 +23,29 @@
 //   console.log(`Server started on port ${port}`);
 // });
 
-const express = require('express');
-const mysql = require('mysql2');
+// const express = require('express');
+// const mysql = require('mysql2');
 
-const app = express();
+// const app = express();
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'tai54852_admin',
-  password: '0C8tVI#)MGFR',
-  database: 'tai54852_db',
-});
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'tai54852_admin',
+//   password: '0C8tVI#)MGFR',
+//   database: 'tai54852_db',
+// });
 
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting to MySQL database:', err);
-  } else {
-    console.log('Connected to MySQL database!');
-  }
-});
+// connection.connect((err) => {
+//   if (err) {
+//     console.error('Error connecting to MySQL database:', err);
+//   } else {
+//     console.log('Connected to MySQL database!');
+//   }
+// });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+// app.listen(3000, () => {
+//   console.log('Server is running on port 3000');
+// });
+
+require('dotenv').config();
+console.log(process.env);
