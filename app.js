@@ -28,39 +28,6 @@ app.get('/', function (req, res) {
 app.post('/contact', async (req, res) => {
   const { hoten, incomeType, kv, sdt, sotienvay } = req.body;
 
-  const htmlContent = `
-    <p>Thông tin khách hàng TPBank</p>
-    <ul>
-      <li>Họ tên: ${hoten}</li>
-      <li>Số điện thoại: ${sdt}</li>
-      <li>Khu vực: ${kv}</li>
-      <li>Số tiền vay: ${sotienvay} VND</li>
-      <li>Điều kiện vay vốn: ${incomeType}</li>
-    </ul>
-  `;
-
-  const mailConfig = {
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    secure: false,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
-    },
-  };
-
-  const mailOptions = {
-    from: process.env.EMAIL_FROM,
-    to: process.env.EMAIL_TO,
-    subject: 'Thông tin khách hàng TPBank',
-    html: htmlContent,
-  };
-
-  let transporter = nodemailer.createTransport(mailConfig);
-  let info = await transporter.sendMail(mailOptions);
-
-  console.log('Message sent: %s', info);
-
   try {
     const connection = await pool.getConnection();
     await connection.execute(
@@ -75,6 +42,39 @@ app.post('/contact', async (req, res) => {
     );
     console.log('Inserted contact successfully');
     connection.release();
+
+    const htmlContent = `
+    <p>Thông tin khách hàng TPBank</p>
+    <ul>
+      <li>Họ tên: ${hoten}</li>
+      <li>Số điện thoại: ${sdt}</li>
+      <li>Khu vực: ${kv}</li>
+      <li>Số tiền vay: ${sotienvay} VND</li>
+      <li>Điều kiện vay vốn: ${incomeType}</li>
+    </ul>
+  `;
+
+    const mailConfig = {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      secure: false,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    };
+
+    const mailOptions = {
+      from: process.env.EMAIL_FROM,
+      to: process.env.EMAIL_TO,
+      subject: 'Thông tin khách hàng TPBank',
+      html: htmlContent,
+    };
+
+    let transporter = nodemailer.createTransport(mailConfig);
+    let info = await transporter.sendMail(mailOptions);
+
+    console.log('Message sent: %s', info);
     res.redirect('/');
   } catch (err) {
     console.error(err);
